@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(./card/7a93d725-ce46-4e33-9960-4e81c39600ff.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .main {
+            width: 98%;
+            height: 48vh;
+            background: rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info {
+            width: 98%;
+            height: 50vh;
+            background: rgba(0, 0, 0, 0.25);
+            box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            color: white;
+            font-size: 35px;
+        }
+
+        .img {
+            margin-left: 5px;
+            display: none;
+        }
+
+        p {
+            margin-left: 5px;
+            display: none;
+        }
+
+        .card {
+            width: 165px;
+            height: 200px;
+            position: relative;
+            float: left;
+            margin: 10px;
+            /* 設定子元素在 3D 空間內 */
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .card-front {
+            width: 100%;
+            height: 100%;
+            background-image: url(./card/1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            /* 隱藏背面 */
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            width: 100%;
+            height: 100%;
+            background-image: url(./card/back.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+
+        .card-close {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="game"></div>
+    </div>
+    <div class="info">
+        <div class="content">
+            <img src="./info/1.png" alt="" class="img">
+            <p class="p1">
+                比特幣為去中心化的加密貨幣。在 2008 年發表的白皮書中，一位（或一群）化名為中本聰 (Satoshi Nakamoto) 的作者，首度探討了比特幣的機制，也隨即於 2009 年 1
+                月正式發行比特幣。
+                比特幣為點對點的線上貨幣，意即所有交易都是直接在平等而獨立的網絡參與者之間進行，不需取得任何中間人的許可或協助安排。根據中本聰自身的說法，創建比特幣是為了讓「線上付款能從一方直接傳送到另一方，中間無須透過任何金融機構」。
+                在比特幣出現前，已有人提出同類型的去中心化電子貨幣概念，但比特幣的獨特之處在於，它是史上第一種被實際應用的加密貨幣。
+            </p>
+            <p class="p2">
+                以太坊 (Ethereum) 為去中心化的開源區塊鏈系統，且擁有自己的加密貨幣「以太幣 (Ether)」。以太坊亦為其他許多加密貨幣運作，以及執行去中心化智能合約的平台。
+                維塔利克·布特林 (Vitalik Buterin) 首次在 2013 年的白皮書中，提出以太坊的概念。布特林和其他共同創辦人，在 2014 年夏天的網路公開募資中，籌得了此計畫的資金，並於 2015 年 7
+                月 30 日正式啟動了此區塊鏈。
+                據稱，以太坊的目標是成為去中心化應用程式的全球平台，為世界各地的用戶提供編寫和運行軟體的環境，且免受審查、停機和詐騙影響。
+            </p>
+            <p class="p3">
+                泰達幣 (USDT) 是一種價值鎖定美元的數位貨幣。泰達幣在 2014 年推出，其目的在創立一種穩定的加密貨幣，用起來就像數位版的美元一樣，亦即「穩定幣」。泰達幣的價值錨定美元的價格，亦即與美元連動。
+                泰達幣在最初係使用比特幣網路的 Omni 層作為交易協定之用，但目前泰達比目前也在以太坊上以 ERC20 代幣形態推出。總體來說，泰達幣共在比特幣（同時使用 Omni 與 Liquid 協定）、以太坊、EOS
+                與 Tron 區塊鏈上發行。
+                泰達幣由 Tether Limited 發行，其執行長與加密貨幣交易所 Bitfinex 是同一人。Tether 先前宣稱其幣值由泰達幣儲備 100％ 擔保，但在 2019 年泰達幣的律師指出其擔保率只有
+                74% 或為部分儲備後，Tether 指出其完全擔保的定義，包括向其附屬公司的放貸。
+            </p>
+            <p class="p4">
+                XRP 是 Ripple 的原生加密貨幣，Ripple 是一個由 Ripple Labs Inc. 推出的加密貨幣付款系統。XRP 是其「為全球付款建構的數位資產」，意即 Ripple
+                將與一般由銀行體系支配的貨幣轉帳相互競爭。XRP 讓用戶以非常低廉的費用進行轉帳，吸引一般消費者與銀行的潛在興趣。Ripple 一個主要的價值取向，在於提供 5 秒內轉帳結算，但交易費用極低。
+                該公司係基於 Ryan Fugger 在 2012 年推出的 XRP Ledger，由 Chris Larsen 與 Jed McCaleb 於 2012 年創辦。XRP Ledger
+                是一個開源加密帳本，由節點構成的同儕網路推動。McCaleb 之後離開 Ripple，創辦另一個著重於付款功能的加密貨幣 Stellar。
+                在該公司自原名 OpenCoin 更名為 Ripple 後，就力推和美國銀行、Santander、標準渣打銀行間的高階合作關係。不過 Ripple
+                很快就因為未能遵守銀行保密法，而陷入美國監管單位的法律糾紛；之後 Ripple 被認為為未註冊證券。直到 2022 年初，該法律糾紛仍未解決。此外，該公司也遭指控在成立初期進行誤導廣告宣傳。
+            </p>
+            <p class="p5">
+                Solana 是一種建構在區塊鏈技術免授權本質的高效能開源專案，提供各種去中心化金融 (DeFi) 解決方案。Solana 專案的構思與初步工作於 2017 年開始，並於 2020 年 3
+                月由總部位於瑞士日内瓦的 Solana Foundation 正式推出。
+                Solana 協定旨在促進去中心化應用程式 (DApp) 的創製。該協定導入歷史證明 (PoH) 共識演算法，並與區塊鏈底層的權益證明 (PoS) 共識機制結合，以提高可規模性。
+                Solana 因其創新的混合式共識模式，受到小型交易者與機構交易者的注目。Solana Foundation 有個明確的目標，是要讓去中心化金融可更大規模的取用。
+            </p>
+            <p class="p6">
+                USD Coin (通常以其代號 USDC 為人所知) 是一種以 1:1 比例錨定美元匯率的穩定幣。該加密貨幣每發行一單位，就有美金 1 元的現金或短期美元國債的儲備支持。此資産幕後的 Centre
+                Consortium 指出，USDC 由受到監管的金融機構發行。
+                該穩定幣在 2018 年 9 月時限量推出。簡單的說，USD Coin 的口號是「數位時代的數位金錢」，該穩定幣是為未來無現金交易更為普及的世界所設計的。
+                USD Coin 也揭露了多種不同的用途。除了在價格波動期間，讓加密貨幣交易者有個安全的避風港外，支援穩定幣的人士也指出，USD Coin
+                可讓企業收取數位資産形式的支付，同時撼動包括去中心化金融與遊戲等多種産業。
+                總之，該計畫目標是創造一個生態系，盡可能增加可接受 USDC 的錢包、交易所、服務提供者與 dApps。
+            </p>
+            <p class="p7">
+                卡爾達諾 (Cardano) 為權益證明 (Proof of Stake) 區塊鏈平台，目標是讓「變革者、創新者和有遠見的人」能夠為全球帶來正向的改變。
+                此開源計畫也希望「重新分配權力，將權力從不負責任的結構中，盡量轉移分配給個人」，協助打造出更安全、透明且公平的社會。
+                成立於 2017 年，卡爾達諾推出的艾達幣旨在確保持有者能參與其網絡的運作。因此，若有人針對軟體提出了任何變更，持有艾達幣的人皆擁有投票權利。
+                此分層區塊鏈背後的團隊表示，其技術的目標是以模組形式開發去中心化應用程式與智能合約，而目前已經出現一些引人關注的應用案例。
+                有農業公司使用卡爾達諾，從產地到餐桌一路追蹤新鮮農作物，也有其他在卡爾達諾平台上建立的產品，讓學歷證明能以防篡改的方式儲存，或讓零售商得以打擊仿冒商品。
+            </p>
+            <p class="p8">
+                Dogecoin (DOGE) 是基於網路上一個熱門的「狗狗」(doge) 迷因，用一隻柴犬當作標誌。這種開源的數位貨幣由位於美國奧勒岡州波特蘭的 Billy Markus 和位於澳洲雪梨的 Jackson
+                Palmer 創辦，在 2013 年 12 月從萊特幣分支出來。狗狗幣的創造者設想，這是一種輕鬆有趣的加密貨幣，因為用了狗狗迷因的哏，應該能夠比比特幣的核心受眾得到更多人的喜愛。Tesla 執行長 Elon
+                Musk 在 Twitter 上多次貼文，說狗狗幣是他最喜歡的代幣。
+            </p>
+            <p class="p9">
+                TRON 是個以區塊鏈為基礎的作業系統，目的在於確保這項科技適於日常使用。比特幣的交易速度可達每秒 6 筆交易，以太幣有 25 筆，而 TRON 宣稱其網路的交易速度達每秒 2000 筆，而且全年無休。
+                我們最好把這個專案看作是聚焦於內容共享與娛樂的去中心化平台；為了達到這個目的，本專案最大的一次收購案，就是於 2018 年併購檔案共享服務 BitTorrent。
+                總體來說，TRON 把其目標分成 6 個階段。這些目標包括推出簡單易用的分散式檔案共享服務、透過財務報酬推動內容創作、讓內容創作者能夠推出自己的代幣、將遊戲產業去中心化等等。
+                TRON 也是在建置 DApps 時最受歡迎的區塊鏈之一。
+            </p>
+            <p class="p10">
+                2017 年，幣安幣透過首次代幣發行 (ICO) 上市，11 天後，幣安 (Binance) 加密貨幣交易所隨之上線。幣安幣原先是在以太坊 (Ethereum) 網絡上發行的 ERC-20
+                代幣，總流通量上限為 2 億枚，在首次代幣發行中則發行了 1 億枚。然而，在 2019 年 4 月，隨著幣安鏈主網上線， ERC-20 幣安幣與 BEP2 幣安幣以 1:1 的比例交換，現已不再由以太坊託管。
+                幣安幣可作為一種付款方式，用戶能使用這種功能型代幣，在幣安幣交易所中抵扣手續費，並參與幣安資產發行平台 (LaunchPad) 上的代幣銷售。幣安幣也為幣安去中心化交易所 (DEX) 的主要貨幣。
+            </p>
+
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.32/sweetalert2.all.min.js'
+        integrity='sha512-zB7yJLSASiSevQmWCrQaq+z/f5zRIa884hwWgmK1oI3MfolIzKcpDtyfBsrGqUi/hMCObVwr/+SZTByOqh0zkQ=='
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+        integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
+        crossorigin='anonymous'></script>
+    <script>
+        function resetGame() {
+            // 隱藏卡片信息和段落
+            $('.img').css('display', 'none');
+            $('p').css('display', 'none');
+
+            // 關閉所有卡片
+            $('.card').addClass('card-close');
+
+            // 從卡片中刪除 "ok" 類
+            $('.card').removeClass('card-ok');
+            $('#game').empty();
+
+            // 重新生成 20 張卡片
+            for (let i = 0; i < 20; i++) {
+                $('#game').append(`
+                    <div class="card card-close">
+                    <div class="card-front"></div>
+                    <div class="card-back"></div>
+                    </div>
+            `);
+            }
+
+            // 重新決定每張的數字
+            $('.card').each(function (index) {
+                const number = index % 10 + 1;
+                $(this).find('.card-front').css('background-image', `url(./card/${index + 1}.png)`);
+                $(this).attr('data-number', number);
+            });
+            // 洗牌卡片
+            for (let i = 0; i < 50; i++) {
+                const randomA = Math.round(Math.random() * 25);
+                const randomB = Math.round(Math.random() * 25);
+                $('.card').eq(randomA).insertAfter($('.card').eq(randomB));
+            }
+        }
+
+        // 產生 20 張卡片
+        for (let i = 0; i < 20; i++) {
+            $('#game').append(`
+        <div class="card card-close">
+          <div class="card-front"></div>
+          <div class="card-back"></div>
+        </div>
+      `)
+        }
+
+        // 決定每張的數字
+        $('.card').each(function (index) {
+            const number = index % 10 + 1
+            console.log(index, number)
+            $(this).find('.card-front').css('background-image', `url(./card/${index + 1}.png)`)
+            $(this).attr('data-number', number)
+        })
+
+        // 打亂
+        for (let i = 0; i < 50; i++) {
+            const randomA = Math.round(Math.random() * 25)
+            const randomB = Math.round(Math.random() * 25)
+            $('.card').eq(randomA).insertAfter($('.card').eq(randomB))
+        }
+
+        // 翻牌
+        $('#game').on('click', '.card', function () {
+            if (
+                // .card 沒有 .card-close 代表被翻開
+                // 如果已翻開數小於兩張
+                $('.card:not(.card-close)').length < 2 &&
+                // 且這張牌還沒翻開
+                $(this).hasClass('card-close') &&
+                // 這張牌還沒配對
+                !$(this).hasClass('card-ok')
+            ) {
+                $(this).removeClass('card-close')
+            }
+            const inf = $('.card:not(.card-close)').eq(0).attr('data-number')
+            const pi = $('.card:not(.card-close)').eq(0).attr('data-number')
+            // 如果翻開兩張了
+            if ($('.card:not(.card-close)').length === 2) {
+                // 如果兩張一樣
+                if (
+                    $('.card:not(.card-close)').eq(0).attr('data-number') ===
+                    $('.card:not(.card-close)').eq(1).attr('data-number')
+                ) {
+                    $('.card:not(.card-close)').addClass('card-ok')
+                    $('.card:not(.card-close)').fadeTo(1000, 0)
+                    $('.img').attr({
+                        src: `./info/${inf}.png`
+                    })
+                    $('p').css('display', 'none');
+                    $(`.p${pi}`).css('display', 'block');
+                    $('.img').css('display', 'block')
+                }
+
+                setTimeout(function () {
+                    // 翻回來
+                    $('.card:not(.card-close)').addClass('card-close')
+                    // 過關判斷
+                    if ($('.card-ok').length === $('.card').length) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '過關',
+                            text: '恭喜你完成挑戰'
+                        }).then(() => {
+                            // 點擊 "ok" 後重置遊戲
+                            resetGame();
+                        });
+                    }
+                }, 1000)
+            }
+        })
+    </script>
+</body>
+
+</html>
